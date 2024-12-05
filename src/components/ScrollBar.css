@@ -1,0 +1,39 @@
+.scroll-container {
+    display: flex; /* Horizontales Layout */
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+    scroll-behavior: smooth; /* Glattes Scrollen */
+    gap: 20px; /* Abstand zwischen den Elementen */
+    padding: 20px; /* Innenabstand */
+    height: 100vh; /* Container füllt die gesamte Höhe */
+    align-items: center; /* Zentriere die Elemente vertikal */
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* Moderner Farbverlauf */
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    height: 10px; /* Höhe der horizontalen Scroll-Leiste */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6); /* Stil für den Scrollbalken */
+    border-radius: 5px; /* Abgerundeter Balken */
+  }
+  
+  .scroll-item {
+    min-width: 300px; /* Breite jedes Elements */
+    height: 400px; /* Höhe jedes Elements */
+    background-color: rgba(255, 255, 255, 0.2); /* Transparenter Hintergrund */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schattierung für Tiefe */
+    border-radius: 20px; /* Runde Ecken */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animations-Effekt */
+  }
+  
+  .scroll-item:hover {
+    transform: scale(1.1); /* Vergrößere das Element beim Hover */
+    background-color: rgba(255, 255, 255, 0.4); /* Hellerer Hintergrund beim Hover */
+  }
+  

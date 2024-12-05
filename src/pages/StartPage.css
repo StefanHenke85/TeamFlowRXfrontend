@@ -1,0 +1,107 @@
+/* Grundlayout für die Startseite */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Entfernt Scrollen */
+    height: 100%; /* Gesamte Höhe ausnutzen */
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Hauptcontainer für die Seite */
+  .start-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Elemente untereinander */
+    height: 100vh; /* Höhe des Viewports */
+    background-image: url("C:\Users\mobil\Desktop\Jetzt\ProjektB\3DWebseite\src\assets\logo1.jpg"); /* Hintergrundbild */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Hauptüberschrift */
+  .start-page h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Allgemeiner Stil für Buttons */
+  .button {
+    display: inline-block;
+    position: absolute; /* Ermöglicht exakte Platzierung */
+    font-size: 1.2rem; /* Textgröße */
+    color: white;
+    background: linear-gradient(90deg, #ff8c00, #ff0080);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none; /* Entfernt Unterstreichung */
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Dynamische Positionierung der Buttons */
+  #button-register {
+    top: 20%;
+    left: 40%;
+  }
+  
+  #button-impressum {
+    top: 60%;
+    left: 30%;
+  }
+  
+  #button-about-us {
+    top: 60%;
+    left: 70%;
+  }
+  
+  #button-login {
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%); /* Zentrierung */
+  }
+  
+  /* Zusätzlicher Stil für Buttons bei Hover */
+  .button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); /* Leuchtender Effekt */
+    cursor: pointer;
+  }
+  
+  /* Media Queries für kleinere Bildschirme */
+  @media (max-width: 768px) {
+    .start-page h1 {
+      font-size: 2rem; /* Kleinere Schriftgröße */
+    }
+  
+    .button {
+      font-size: 1rem; /* Kleinere Buttons */
+      padding: 10px 20px;
+    }
+  
+    #button-register, #button-impressum, #button-about-us, #button-login {
+      position: relative; /* Dynamische Positionierung fällt weg */
+      margin: 10px 0; /* Abstand zwischen Buttons */
+    }
+  
+    .start-page {
+      flex-direction: column; /* Alles untereinander */
+    }
+  }
+  
+  /* Animationen */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

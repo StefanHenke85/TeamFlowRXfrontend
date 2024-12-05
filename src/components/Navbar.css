@@ -1,0 +1,48 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0d47a1, #42a5f5, #90caf9);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links li {
+    cursor: pointer;
+    font-size: 1em;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-links li:hover {
+    color: #ffee58;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 70px; /* Passe die Höhe an */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('C:\Users\mobil\Desktop\Projekt\frontend\src\assets\DALL·E 2024-11-22 14.08.12 - A futuristic flowing background design with vibrant purple, blue, and white highlights. The style is abstract with soft gradients and glowing lines re.webp'); /* Pfad anpassen */
+    background-size: cover; /* Bild skalieren */
+    background-position: center; /* Zentrieren */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optionaler Schatten */
+  }
+  

@@ -1,0 +1,85 @@
+/* Allgemeines Styling */
+.about-us-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Transparenter schwarzer Hintergrund */
+  backdrop-filter: blur(10px); /* Unschärfe-Effekt */
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  overflow: hidden; /* Verhindert Scrollen */
+}
+
+/* Card Styling */
+.card {
+  background: rgba(31, 41, 55, 0.8); /* Halbtransparenter Hintergrund */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  backdrop-filter: blur(15px); /* Intensiver Unschärfe-Effekt */
+  z-index: 1000; /* Stellt sicher, dass die Card über dem Hintergrund bleibt */
+}
+
+/* Überschrift */
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #60a5fa; /* Helles Blau für den Titel */
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2); /* Leichter Schlagschatten für bessere Lesbarkeit */
+}
+
+/* Text */
+.card p {
+  margin: 10px 0;
+  line-height: 1.8;
+  color: #e0f7fa; /* Helles Cyan für den Text */
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+/* Button Container */
+.button-container {
+  margin-top: 30px;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #2563eb, #3b82f6); /* Blaue Verlaufsfarbe */
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa); /* Hellblauer Hover-Effekt */
+  transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Zusätzliche Anpassungen für den Text-Link */
+.link {
+  display: block;
+  margin-top: 20px;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}

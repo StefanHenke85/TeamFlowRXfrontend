@@ -1,0 +1,119 @@
+/* RegisterLogin.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('C:\Users\mobil\Desktop\Jetzt\ProjektB\3DWebseite\src\assets\logo1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden; /* Deaktiviert Scrollen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter schwarzer Hintergrund */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(5px); /* Unschärfe-Effekt */
+  z-index: 1000; /* sicherstellen, dass das Formular über dem Hintergrund ist */
+  cursor: move; /* Verschiebefunktion */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  outline: none;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #e0e0e0;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+}
+
+.link {
+  display: block;
+  margin-top: 20px;
+  color: #ff758c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Zusätzliche Anpassungen für Verschiebefunktion */
+.container {
+  cursor: move;
+}
+
+.input-container {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

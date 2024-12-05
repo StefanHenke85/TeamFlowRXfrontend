@@ -1,0 +1,46 @@
+/* Container für die Buttons im Kreis */
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Hintergrundfarbe für die Ansicht */
+}
+
+.button-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background: none;
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Positionierung der Buttons im Kreis */
+.button:nth-child(1) {
+  transform: rotate(0deg) translateY(-90px) rotate(0deg);
+}
+.button:nth-child(2) {
+  transform: rotate(180deg) translateY(-90px) rotate(180deg);
+}
+
+.button:hover {
+  background-color: #ddd; /* Hover-Effekt */
+}
