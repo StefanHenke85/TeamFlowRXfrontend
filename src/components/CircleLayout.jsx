@@ -1,5 +1,5 @@
 import React from "react";
-import "./CircleLayout.css"; // CSS-Datei für die Stile
+
 
 const CircleLayout = () => {
   return (

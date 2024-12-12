@@ -1,0 +1,22 @@
+.whiteboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("C:\Users\mobil\Desktop\Jetzt\TeamFlowRXfrontend\public\white.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .whiteboard-container .react-sketch-canvas {
+    border: 3px solid #A259FF; /* Lila Rahmen */
+    border-radius: 15px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Schatteneffekt */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .whiteboard-container .react-sketch-canvas:hover {
+    transform: scale(1.02); /* Leichter Hover-Effekt */
+    border-color: #9135e0; /* Leichter Farbwechsel beim Hover */
+  }
+  

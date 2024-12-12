@@ -1,85 +1,123 @@
-/* Allgemeines Styling */
+/* Allgemeine Einstellungen */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Hintergrund */
 .about-us-page {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: rgba(0, 0, 0, 0.6); /* Transparenter schwarzer Hintergrund */
-  backdrop-filter: blur(10px); /* Unschärfe-Effekt */
-  font-family: "Poppins", sans-serif;
-  color: #ffffff;
-  overflow: hidden; /* Verhindert Scrollen */
-}
-
-/* Card Styling */
-.card {
-  background: rgba(31, 41, 55, 0.8); /* Halbtransparenter Hintergrund */
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  padding: 40px;
+  height: 100vh; /* Vollbild */
   text-align: center;
-  max-width: 450px;
-  width: 90%;
-  backdrop-filter: blur(15px); /* Intensiver Unschärfe-Effekt */
-  z-index: 1000; /* Stellt sicher, dass die Card über dem Hintergrund bleibt */
 }
 
-/* Überschrift */
-.card h2 {
-  margin-bottom: 20px;
-  font-size: 2em;
-  color: #60a5fa; /* Helles Blau für den Titel */
-  font-weight: 600;
-  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2); /* Leichter Schlagschatten für bessere Lesbarkeit */
+/* Glas-Effekt-Box */
+.about-us-content {
+  position: relative;
+  width: 700px;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.1); /* Transparenter Hintergrund */
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 230, 255, 0.6);
+  padding: 40px;
+  animation: fadeIn 1.2s ease-in-out, float 5s infinite ease-in-out;
+  z-index: 2; /* Über dem Hintergrundvideo */
 }
 
-/* Text */
-.card p {
-  margin: 10px 0;
-  line-height: 1.8;
-  color: #e0f7fa; /* Helles Cyan für den Text */
-  font-size: 1.1em;
-  font-weight: 400;
+/* Titel */
+.about-us-content h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  color: #00e6ff;
+  text-shadow: 0 0 15px #00e6ff;
+  animation: pulse 2s infinite;
 }
 
-/* Button Container */
-.button-container {
-  margin-top: 30px;
-}
-
-/* Buttons */
-.button {
-  display: inline-block;
-  text-decoration: none;
-  background: linear-gradient(135deg, #2563eb, #3b82f6); /* Blaue Verlaufsfarbe */
-  color: #ffffff;
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-size: 1.1em;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.button:hover {
-  background: linear-gradient(135deg, #3b82f6, #60a5fa); /* Hellblauer Hover-Effekt */
-  transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Zusätzliche Anpassungen für den Text-Link */
-.link {
-  display: block;
-  margin-top: 20px;
-  color: #60a5fa;
-  text-decoration: none;
-  font-weight: 600;
+/* Texte */
+.about-us-content p {
   font-size: 1.2em;
-  transition: color 0.3s;
+  line-height: 1.6;
+  color: #e0f7fa;
+  margin: 10px 0;
 }
 
-.link:hover {
-  color: #3b82f6;
-  text-decoration: underline;
+/* Button */
+.back-button-container {
+  margin-top: 25px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #00e6ff;
+  border: 2px solid #00e6ff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 230, 255, 0.8);
+}
+
+.back-button:hover {
+  background: #00e6ff;
+  color: #333;
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 230, 255, 1);
+}
+
+/* Header- und Footer-Balken */
+.header-bar, .footer-bar {
+  position: fixed;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #00e6ff, #0066ff);
+  box-shadow: 0 0 10px rgba(0, 230, 255, 0.7);
+}
+
+.header-bar {
+  top: 0;
+}
+
+.footer-bar {
+  bottom: 0;
+}
+
+/* Keyframe-Animationen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #00e6ff, 0 0 30px #00e6ff;
+  }
 }

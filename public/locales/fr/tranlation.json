@@ -1,0 +1,58 @@
+{
+  
+  "language": "Langue",
+  "impressum_title": "Mentions légales",
+  "impressum_content": "Contenu de la page des mentions légales",
+  "page_not_found": "Page non trouvée",
+  "return_home": "Retour à la page d'accueil",
+  "register": "S'inscrire",
+  "login": "Se connecter",
+  "verify": "Vérifier",
+  "username": "Nom d'utilisateur",
+  "password": "Mot de passe",
+  "email": "Adresse e-mail",
+  "verification_code": "Code de vérification",
+  "back_to_home": "Retour à la page d'accueil",
+  
+  "register_login": "S'inscrire / Se connecter",
+  "email_verification": "Adresse e-mail (pour vérification)",
+  "verify_code": "Vérifier le code",
+  "register_success": "Inscription réussie! Vérifiez votre e-mail.",
+  "register_error": "Erreur lors de l'inscription.",
+  "login_success": "Connexion réussie!",
+  "login_error": "Erreur lors de la connexion.",
+  "verification_success": "Vérification réussie!",
+  "verification_error": "Erreur lors de la vérification.",
+  "room_selection": "Accéder à la sélection de la salle",
+  "verification": "Vérification",
+
+
+  "about_us": "À propos de nous",
+  "about_us_description": "Nous sommes une équipe spécialisée dans le développement de plateformes créatives et interactives qui font passer la collaboration au niveau supérieur.",
+  "welcome_message": "Bienvenue sur TeamFlow-XR ! Nous sommes une équipe spécialisée dans le développement de plateformes créatives et interactives qui portent la collaboration à un autre niveau.",
+  "goal_message": "Notre objectif est de connecter les gens du monde entier grâce à une technologie innovante et de permettre un travail d'équipe efficace dans un environnement immersif et dynamique.",
+  "thank_you_message": "Merci de faire partie de notre vision. Ensemble, nous façonnons l'avenir de la collaboration !",
+
+  "impressum": "Mentions légales",
+  "impressum_intro": "Bienvenue sur notre page de mentions légales.",
+  "company_name": "Nom de l'entreprise",
+  "address": "Adresse: Confidentiel",
+  "postal_city": "Code postal, Ville: ***** VilleSecrète",
+  "email_address": "Adresse e-mail: geheim@geheim.geheim",
+  "phone": "Téléphone: *********",
+  "content_responsible": "Responsable du contenu:",
+  "responsible_person": "Personne responsable",
+  "disclaimer": "Clause de non-responsabilité",
+  "back_to_homepage": "Retour à la page d'accueil",
+
+  
+  "room_selection_title": "Sélection de Salle",
+  "room_name": "Nom de la salle",
+  "max_people": "Personnes max.",
+  "create_room": "Créer une salle",
+  "max_label": "Max"
+
+  
+
+  
+}

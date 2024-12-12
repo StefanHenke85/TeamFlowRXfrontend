@@ -1,119 +1,154 @@
-/* RegisterLogin.css */
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: url('C:\Users\mobil\Desktop\Jetzt\ProjektB\3DWebseite\src\assets\logo1.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  overflow: hidden; /* Deaktiviert Scrollen */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* Allgemeine Container-Stile */
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 500px;
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter schwarzer Hintergrund */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  backdrop-filter: blur(5px); /* Unschärfe-Effekt */
-  z-index: 1000; /* sicherstellen, dass das Formular über dem Hintergrund ist */
-  cursor: move; /* Verschiebefunktion */
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.form-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('dein-hintergrundbild.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  padding: 20px;
+  overflow: hidden;
 }
 
-.form-section {
+/* Titel */
+h1 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-input {
+/* Formular Container */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 900px; /* Maximale Breite der Container */
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Einzelne Form Sections */
+.form-section {
+  background: rgba(0, 0, 0, 0.6);  /* Transparente schwarze Hintergrund */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 280px;  /* Kleinere Breite für Formularsektionen */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-section:hover {
+  transform: translateY(-5px); /* Leichte Hebung bei Hover */
+}
+
+/* Eingabefelder */
+.form-section input {
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  font-size: 0.9rem;
+  border: 2px solid #dcd0ff;
+  border-radius: 8px;
   outline: none;
-  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);  /* Leichte Transparenz */
+  color: #fff;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
-input::placeholder {
-  color: #e0e0e0;
+.form-section input:focus {
+  border-color: #8e44ad; /* Lila Fokusfarbe */
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+.form-section button {
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #8e44ad;  /* Lila Hintergrund */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-section button:hover {
+  background-color: #9b59b6; /* Helleres Lila bei Hover */
+  transform: translateY(-2px); /* Sanfte Schwebebewegung */
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 12px;
   font-size: 1rem;
-  font-weight: bold;
-  color: #ffffff;
-  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  color: #fff;
+  background-color: #8e44ad;
   border: none;
-  border-radius: 25px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-transform: uppercase;
-}
-
-.button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
-}
-
-.link {
-  display: block;
+  transition: background-color 0.3s, transform 0.3s;
   margin-top: 20px;
-  color: #ff758c;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Zusätzliche Anpassungen für Verschiebefunktion */
-.container {
-  cursor: move;
-}
-
-.input-container {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #9b59b6;
+  transform: translateY(-2px);
 }
 
-.link {
+/* Nachricht und Fehleranzeige */
+p {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Erfolgsbutton */
+.button {
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+/* Link zu Home */
+a.link {
+  font-size: 1rem;
+  color: #8e44ad;
   text-decoration: none;
-  color: #007bff;
+  margin-top: 15px;
 }
 
-.link:hover {
+a.link:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-section {
+    width: 100%;
+    max-width: 100%;  /* Formularsektionen füllen den Bildschirm auf kleineren Geräten */
+  }
 }

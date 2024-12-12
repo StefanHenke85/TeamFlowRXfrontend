@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Importiere Link für Navigation
+import { useTranslation } from 'react-i18next'; // Importiere useTranslation
 import "./AboutUsPage.css"; // Importiere die CSS-Datei für das Styling
 
 const AboutUsPage = () => {
+  const { t } = useTranslation(); // Verwende useTranslation für Übersetzungen
+
   return (
     <div className="about-us-page">
       {/* Oberer Balken */}
@@ -10,23 +13,21 @@ const AboutUsPage = () => {
 
       {/* Inhalt der About Us-Seite */}
       <div className="about-us-content">
-        <h1>About Us</h1>
+        <h1>{t('about_us')}</h1> {/* Übersetzung des Titels */}
         <p>
-          Willkommen bei <strong>TeamFlow-XR</strong>! Wir sind ein Team, das sich darauf spezialisiert hat, kreative und 
-          interaktive Plattformen zu entwickeln, die Zusammenarbeit auf die nächste Ebene heben.
+          {t('welcome_message')} <strong>TeamFlow-XR</strong>! {t('about_us_description')}
         </p>
         <p>
-          Unser Ziel ist es, durch innovative Technologie Menschen weltweit zu verbinden und effektive 
-          Teamarbeit in einem immersiven und dynamischen Umfeld zu ermöglichen.
+          {t('goal_message')}
         </p>
         <p>
-          Vielen Dank, dass Sie ein Teil unserer Vision sind. Gemeinsam gestalten wir die Zukunft der Zusammenarbeit!
+          {t('thank_you_message')}
         </p>
 
         {/* Button zur Startseite */}
         <div className="back-button-container">
           <Link to="/" className="back-button">
-            Zur Startseite
+            {t('back_to_home')} {/* Übersetzung für den Button */}
           </Link>
         </div>
       </div>

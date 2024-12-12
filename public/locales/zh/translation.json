@@ -1,0 +1,60 @@
+{
+  
+  "language": "语言",
+  "impressum_title": "版权声明",
+  "impressum_content": "版权声明页面内容",
+  "page_not_found": "页面未找到",
+  "return_home": "返回首页",
+  "register": "注册",
+  "login": "登录",
+  "verify": "验证",
+  "username": "用户名",
+  "password": "密码",
+  "email": "电子邮件地址",
+  "verification_code": "验证码",
+  "back_to_home": "返回首页",
+  
+  "register_login": "注册 / 登录",
+  "email_verification": "电子邮件地址（用于验证）",
+  "verify_code": "验证代码",
+  "register_success": "注册成功！请检查您的电子邮件。",
+  "register_error": "注册时出错。",
+  "login_success": "登录成功！",
+  "login_error": "登录时出错。",
+  "verification_success": "验证成功！",
+  "verification_error": "验证时出错。",
+  "room_selection": "进入房间选择",
+  "verification": "验证",
+
+
+
+  "about_us": "关于我们",
+  "about_us_description": "我们是一支专注于开发创新和互动平台的团队，将协作提升到新的水平。",
+  "welcome_message": "欢迎来到 TeamFlow-XR! 我们是一支专注于开发创意和互动平台的团队 旨在将协作提升到一个新的水平。",
+  "goal_message": "我们的目标是通过创新技术将全球的人们连接起来，并在沉浸式和动态的环境中实现高效的团队合作。",
+  "thank_you_message": "感谢您成为我们愿景的一部分。让我们一起塑造协作的未来！",
+
+  "impressum": "法律声明",
+  "impressum_intro": "欢迎来到我们的法律声明页面。",
+  "company_name": "公司名称",
+  "address": "地址: 保密",
+  "postal_city": "邮政编码, 城市: ***** 秘密城",
+  "email_address": "电子邮件地址: geheim@geheim.geheim",
+  "phone": "电话: *********",
+  "content_responsible": "内容负责人:",
+  "responsible_person": "负责人",
+  "disclaimer": "免责声明",
+  "back_to_homepage": "返回主页",
+
+  
+  "room_selection_title": "房间选择",
+  "room_name": "房间名称",
+  "max_people": "最多人数",
+  "create_room": "创建房间",
+  "max_label": "最多"
+  
+  
+
+
+}
+

@@ -1,17 +1,20 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./RegisterLogin.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Zum Navigieren nach erfolgreichem Login
+import { useNavigate } from "react-router-dom";
 
 const RegisterLogin = () => {
+  const { t } = useTranslation();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [verificationCode, setVerificationCode] = useState("");
   const [message, setMessage] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Status für den Login
-  const [token, setToken] = useState(""); // Token speichern
-  const navigate = useNavigate(); // useNavigate für Navigation
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [token, setToken] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = async () => {
     try {
@@ -20,9 +23,9 @@ const RegisterLogin = () => {
         password,
         email,
       });
-      setMessage(response.data.message || "Registrierung erfolgreich! Überprüfe deine E-Mail.");
+      setMessage(response.data.message || t("register_success"));
     } catch (error) {
-      setMessage(error.response?.data?.error || "Fehler bei der Registrierung.");
+      setMessage(error.response?.data?.error || t("register_error"));
     }
   };
 
@@ -32,14 +35,12 @@ const RegisterLogin = () => {
         username,
         password,
       });
-      setToken(response.data.token); // Token speichern
-      setMessage("Login erfolgreich!"); // Erfolgsmeldung ohne den Token anzuzeigen
-      setIsLoggedIn(true); // Login erfolgreich, Button zur Room-Auswahl anzeigen
-
-      // Nach dem erfolgreichen Login zur Room-Selection navigieren
-      navigate("/room-selection"); // Navigiere zur Room-Selection-Seite
+      setToken(response.data.token);
+      setMessage(t("login_success"));
+      setIsLoggedIn(true);
+      navigate("/room-selection");
     } catch (error) {
-      setMessage(error.response?.data?.error || "Fehler beim Login.");
+      setMessage(error.response?.data?.error || t("login_error"));
     }
   };
 
@@ -49,114 +50,94 @@ const RegisterLogin = () => {
         username,
         code: verificationCode,
       });
-      setMessage(response.data.message || "Verifizierung erfolgreich!");
+      setMessage(response.data.message || t("verification_success"));
     } catch (error) {
-      setMessage(error.response?.data?.error || "Fehler bei der Verifizierung.");
+      setMessage(error.response?.data?.error || t("verification_error"));
     }
   };
 
-  const handleDragStart = (e) => {
-    const container = e.target;
-    const offsetX = e.clientX - container.getBoundingClientRect().left;
-    const offsetY = e.clientY - container.getBoundingClientRect().top;
-
-    const handleDragMove = (e) => {
-      container.style.left = e.clientX - offsetX + "px";
-      container.style.top = e.clientY - offsetY + "px";
-    };
-
-    const handleDragEnd = () => {
-      window.removeEventListener("mousemove", handleDragMove);
-      window.removeEventListener("mouseup", handleDragEnd);
-    };
-
-    window.addEventListener("mousemove", handleDragMove);
-    window.addEventListener("mouseup", handleDragEnd);
-  };
-
   return (
-    <div className="container" onMouseDown={handleDragStart}>
-      <h1>Registrieren / Login</h1>
+    <div className="container">
+      <h1>{t("register_login")}</h1>
       <div className="form-container">
         <div className="form-section">
-          <h2>Registrieren</h2>
+          <h2>{t("register")}</h2>
           <input
             type="text"
-            placeholder="Benutzername"
+            placeholder={t("username")}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Passwort"
+            placeholder={t("password")}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <input
             type="email"
-            placeholder="E-Mail-Adresse"
+            placeholder={t("email")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <button className="button" onClick={handleRegister}>
-            Registrieren
+            {t("register")}
           </button>
         </div>
 
         <div className="form-section">
-          <h2>Login</h2>
+          <h2>{t("login")}</h2>
           <input
             type="text"
-            placeholder="Benutzername"
+            placeholder={t("username")}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Passwort"
+            placeholder={t("password")}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <button className="button" onClick={handleLogin}>
-            Login
+            {t("login")}
           </button>
         </div>
 
         <div className="form-section">
-          <h2>Verifizierung</h2>
+          <h2>{t("verification")}</h2>
           <input
             type="email"
-            placeholder="E-Mail-Adresse (zur Verifizierung)"
+            placeholder={t("email_verification")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="text"
-            placeholder="Verifizierungscode"
+            placeholder={t("verification_code")}
             value={verificationCode}
             onChange={(e) => setVerificationCode(e.target.value)}
           />
           <button className="button" onClick={handleVerifyCode}>
-            Code Verifizieren
+            {t("verify_code")}
           </button>
         </div>
       </div>
 
-      {/* Erfolgs- oder Fehlermeldung */}
       <p>{message}</p>
 
-      {/* Button zur Room-Auswahl nur anzeigen, wenn eingeloggt */}
       {isLoggedIn && (
         <button className="button" onClick={() => navigate("/RoomSelectionPage")}>
-          Zur Room-Selection
+          {t("room_selection")}
         </button>
       )}
 
       <a href="/" className="link">
-        Zurück zur Startseite
+        {t("back_to_home")}
       </a>
     </div>
   );
 };
 
 export default RegisterLogin;
+

@@ -1,0 +1,135 @@
+/* Allgemeine Styles für die Login-Page */
+.Login-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none; /* Keine Hintergrundfarbe, da Wasser-Video sichtbar bleibt */
+    color: #ffffff;
+    font-family: "Poppins", Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Hintergrundvideo */
+  .Login-page video {
+    position: fixed; /* Fixiertes Hintergrundvideo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Video skaliert und bleibt im Fokus */
+    z-index: -1; /* Hinter allen anderen Elementen */
+  }
+  
+
+  
+  /* Inhalt der Login-Seite */
+  .login-content {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15); /* Transparenter Hintergrund */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Glassmorphism-Effekt */
+    animation: fadeIn 1.5s ease-in-out;
+    max-width: 500px;
+    z-index: 1; /* Inhalt bleibt über dem Video */
+  }
+  
+  /* Überschrift */
+  .login-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #c084fc; /* Lila Akzent */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(193, 132, 252, 0.7);
+  }
+  
+  /* Beschreibung */
+  .login-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e2e2e2;
+  }
+  
+  /* Hervorhebung */
+  .login-content p strong {
+    color: #c084fc;
+    font-weight: 700;
+  }
+  
+  /* Button zur Startseite */
+  .back-button-container {
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #9b34ff, #6d28ed);
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(109, 40, 237, 0.5);
+  }
+  
+  .back-button:hover {
+    background: linear-gradient(90deg, #6d28ed, #9b34ff);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(193, 132, 252, 0.8);
+  }
+  
+  /* Animation für Inhalt */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Anpassungen */
+  @media (max-width: 768px) {
+    .login-content {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .login-content h1 {
+      font-size: 2rem;
+    }
+  }
+
+  /* Hauptcontainer */
+.Login-page {
+    position: relative;
+    height: 100vh; /* Höhe des gesamten Viewports */
+  }
+  
+  /* Box (Inhalt) */
+  .login-content {
+    position: absolute;
+    top: 25%; /* Abstand vom oberen Rand des Bildschirms */
+    left: 51%; /* Horizontal in die Mitte */
+    transform: translate(-50%, -20%); /* Zentriert die Box basierend auf ihrer Mitte */
+    padding: 30px;
+  
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+  }
+  

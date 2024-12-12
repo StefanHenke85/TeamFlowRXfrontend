@@ -1,0 +1,59 @@
+{
+
+    "language": "Language",
+    "impressum_title": "Impressum",
+    "impressum_content": "Content of the Impressum page",
+    "page_not_found": "Page not found",
+    "return_home": "Return to homepage",
+    "register": "Register",
+    "login": "Login",
+    "verify": "Verify",
+    "username": "Username",
+    "password": "Password",
+    "email": "Email Address",
+    "verification_code": "Verification Code",
+    "back_to_home": "Back to homepage",
+    
+    "register_login": "Register / Login",
+    "email_verification": "Email Address (for verification)",
+    "verify_code": "Verify Code",
+    "register_success": "Registration successful! Check your email.",
+    "register_error": "Error during registration.",
+    "login_success": "Login successful!",
+    "login_error": "Error during login.",
+    "verification_success": "Verification successful!",
+    "verification_error": "Error during verification.",
+    "room_selection": "Go to Room Selection",
+    "verification": "Verification",
+
+    "about_us": "About Us",
+    "about_us_description": "We are a team specialized in developing creative and interactive platforms that take collaboration to the next level.",
+    "welcome_message": "Welcome to TeamFlow-XR! We are a team dedicated to developing creative and interactive platforms that take collaboration to the next level.",
+    "goal_message": "Our goal is to connect people worldwide through innovative technology and enable effective teamwork in an immersive and dynamic environment.",
+    "thank_you_message": "Thank you for being part of our vision. Together, we shape the future of collaboration!",
+
+    "impressum": "Legal Notice",
+    "impressum_intro": "Welcome to our legal notice page.",
+    "company_name": "Company Name",
+    "address": "Address: Confidential",
+    "postal_city": "Postal Code, City: ***** SecretTown",
+    "email_address": "Email Address: geheim@geheim.geheim",
+    "phone": "Phone: *********",
+    "content_responsible": "Content Responsible:",
+    "responsible_person": "Responsible Person",
+    "disclaimer": "Disclaimer",
+    "back_to_homepage": "Back to homepage",
+
+
+    "room_selection_title": "Room Selection",
+    "room_name": "Room Name",
+    "max_people": "Max. People",
+    "create_room": "Create Room",
+    "max_label": "Max"
+      
+
+
+      
+
+  }
+  

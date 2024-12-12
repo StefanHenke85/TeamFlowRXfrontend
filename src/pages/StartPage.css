@@ -1,107 +1,120 @@
-/* Grundlayout für die Startseite */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Entfernt Scrollen */
-    height: 100%; /* Gesamte Höhe ausnutzen */
-    font-family: "Arial", sans-serif;
+/* Container für die Seite */
+.start-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Hintergrundbild */
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Buttons Container */
+.buttons-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Futuristisches Button Design */
+.circle-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparentes Schwarz */
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 10;
+  box-shadow: 0 0 10px #8a2be2, 0 0 30px rgba(138, 43, 226, 0.5);
+}
+
+/* Hover Effekt */
+.circle-button::before,
+.circle-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(138, 43, 226, 0.8),
+    transparent
+  );
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.circle-button:hover::before {
+  left: 100%;
+}
+
+.circle-button:hover {
+  color: #8a2be2;
+  border-color: #8a2be2;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px #8a2be2, 0 0 40px #9400d3;
+}
+
+/* Glitch Effekt */
+.circle-button:hover::after {
+  animation: glitch 0.7s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(-2px, -2px);
   }
-  
-  /* Hauptcontainer für die Seite */
-  .start-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Elemente untereinander */
-    height: 100vh; /* Höhe des Viewports */
-    background-image: url("C:\Users\mobil\Desktop\Jetzt\ProjektB\3DWebseite\src\assets\logo1.jpg"); /* Hintergrundbild */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
+  25% {
+    transform: translate(2px, 2px);
   }
-  
-  /* Hauptüberschrift */
-  .start-page h1 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-    animation: fadeIn 2s ease-in-out;
+  50% {
+    transform: translate(-2px, 2px);
   }
-  
-  /* Allgemeiner Stil für Buttons */
-  .button {
-    display: inline-block;
-    position: absolute; /* Ermöglicht exakte Platzierung */
-    font-size: 1.2rem; /* Textgröße */
-    color: white;
-    background: linear-gradient(90deg, #ff8c00, #ff0080);
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none; /* Entfernt Unterstreichung */
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  75% {
+    transform: translate(2px, -2px);
   }
-  
-  /* Dynamische Positionierung der Buttons */
-  #button-register {
-    top: 20%;
-    left: 40%;
+  100% {
+    transform: translate(-2px, -2px);
   }
-  
-  #button-impressum {
-    top: 60%;
-    left: 30%;
-  }
-  
-  #button-about-us {
-    top: 60%;
-    left: 70%;
-  }
-  
-  #button-login {
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%); /* Zentrierung */
-  }
-  
-  /* Zusätzlicher Stil für Buttons bei Hover */
-  .button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); /* Leuchtender Effekt */
-    cursor: pointer;
-  }
-  
-  /* Media Queries für kleinere Bildschirme */
-  @media (max-width: 768px) {
-    .start-page h1 {
-      font-size: 2rem; /* Kleinere Schriftgröße */
-    }
-  
-    .button {
-      font-size: 1rem; /* Kleinere Buttons */
-      padding: 10px 20px;
-    }
-  
-    #button-register, #button-impressum, #button-about-us, #button-login {
-      position: relative; /* Dynamische Positionierung fällt weg */
-      margin: 10px 0; /* Abstand zwischen Buttons */
-    }
-  
-    .start-page {
-      flex-direction: column; /* Alles untereinander */
-    }
-  }
-  
-  /* Animationen */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+}
+
+/* Buttons Positionen */
+.circle-button.top {
+  top: 3%; /* Oben */
+  left: 51%;
+}
+
+.circle-button.left {
+  top: 45%; /* Links */
+  left: 30%;
+}
+
+.circle-button.right {
+  top: 45%; /* Rechts */
+  left: 71%;
+}
+
+.circle-button.bottom {
+  bottom: 5%; /* Unten */
+  left: 52%;
+}
