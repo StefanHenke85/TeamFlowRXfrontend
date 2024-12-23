@@ -69,10 +69,10 @@
 }
 
 .circle-button:hover {
-  color: #8a2be2;
-  border-color: #8a2be2;
+  color: #008cff;
+  border-color: #0099ff;
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px #8a2be2, 0 0 40px #9400d3;
+  box-shadow: 0 0 15px #0099ff, 0 0 40px #0099ff;
 }
 
 /* Glitch Effekt */
@@ -117,4 +117,57 @@
 .circle-button.bottom {
   bottom: 5%; /* Unten */
   left: 52%;
+}
+
+
+.circle-button {
+  display: flex;
+  align-items: center; /* Zentriert Icon und Text vertikal */
+  justify-content: center;
+  gap: 8px; /* Abstand zwischen Icon und Text */
+  color: white; /* Textfarbe */
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.button-icon {
+  font-size: 1.5rem; /* Größe der Icons */
+}
+
+.circle-button {
+  display: flex;
+  align-items: center; /* Zentriert Icon vertikal */
+  justify-content: center; /* Zentriert Icon horizontal */
+  color: white; /* Farbe der Icons */
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%; /* Kreisform */
+  width: 60px; /* Größe der Buttons */
+  height: 60px;
+  font-size: 1.5rem; /* Icon-Größe */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle-button:hover {
+  transform: scale(1.1); /* Hover-Effekt */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.button-icon {
+  font-size: 2rem; /* Größe der Icons */
+}
+
+/* TranslationErrorMessage.css */
+.translation-error-message {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.5); /* Weißer Hintergrund mit Transparenz */
+  color: black; /* Textfarbe auf Schwarz setzen */
+  font-size: 12px; /* Kleinere Schriftgröße */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.8); /* Dunkler Rand */
+  text-align: center;
+  z-index: 999; /* Sicherstellen, dass es immer sichtbar ist */
 }

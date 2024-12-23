@@ -31,3 +31,11 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+/* Füge .room-selection-page zu allen globalen CSS-Styles hinzu, die nur auf die Room Selection Page angewendet werden sollen */
+.room-selection-page {
+  background: linear-gradient(145deg, #6a0dad, #9b30ff);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

@@ -108,7 +108,7 @@ p {
   color: #e74c3c;
   text-align: center;
   margin-top: 20px;
-}
+  }
 
 /* Erfolgsbutton */
 .button {
@@ -131,9 +131,10 @@ p {
 /* Link zu Home */
 a.link {
   font-size: 1rem;
-  color: #8e44ad;
+  color: #f4edf0;
   text-decoration: none;
-  margin-top: 15px;
+  margin-top:120px;
+  margin-left: 30px; /* Text nach rechts verschieben */
 }
 
 a.link:hover {
@@ -151,4 +152,45 @@ a.link:hover {
     width: 100%;
     max-width: 100%;  /* Formularsektionen füllen den Bildschirm auf kleineren Geräten */
   }
+}
+
+/* Overlay Menü-Style */
+.overlay-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  text-align: left;
+}
+
+.overlay-menu.show {
+  display: block;
+}
+
+.overlay-menu img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.overlay-menu button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.overlay-menu button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

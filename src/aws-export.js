@@ -1,4 +1,4 @@
-import { Auth } from 'aws-amplify'; // Nur Auth importieren
+//import { Auth } from 'aws-amplify';    // Nur Auth importieren
 import Amplify from 'aws-amplify';
 
 const awsconfig = {

@@ -7,7 +7,8 @@ import de from "../public/locales/de/translation.json";
 import fr from "../public/locales/fr/tranlation.json";
 import ru from "../public/locales/ru/translation.json";
 import zh from "../public/locales/zh/translation.json";
-
+import es from "../public/locales/es/translation.json";
+import pt from "../public/locales/pt/translation.json";
 // Sprache aus Local Storage holen
 const savedLanguage = localStorage.getItem("language") || "en";
 
@@ -20,6 +21,8 @@ i18n
       fr: { translation: fr },
       ru: { translation: ru },
       zh: { translation: zh },
+      es: { translation: es },
+      pt: { translation: pt },
     },
     lng: savedLanguage,
     fallbackLng: "en", // Fallback-Sprache

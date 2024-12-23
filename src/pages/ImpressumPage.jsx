@@ -21,12 +21,12 @@ const ImpressumPage = () => {
           {t("address")}: Geheim <br />
           {t("postal_city")}: ***** GeheimHausen <br />
           {t("email")}: geheim@geheim.geheim <br />
-          {t("phone")}: *********
+          {t("phone")}: ***********     
         </p>
         
         <p>
-          {t("content_responsible")}: <br />
-          {t("responsible_person")}. <br />
+          {t("content_responsible")} <br />
+          {t("responsible_person")} <br />
           **********************************************
         </p>
         

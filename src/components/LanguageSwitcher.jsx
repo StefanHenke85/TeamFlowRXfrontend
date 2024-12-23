@@ -6,6 +6,8 @@ import germanyFlag from "../assets/flags/germany-flag-icon-64.png";
 import franceFlag from "../assets/flags/france-flag-small.jpg";
 import russiaFlag from "../assets/flags/russia-flag-small.jpg";
 import chinaFlag from "../assets/flags/china-flag-small.jpg";
+import portugalFlag from "../assets/flags/portugal-flag-small.png";
+import spanienFlag from "../assets/flags/spanien-flag-small.png";
 import "./LanguageSwitcher.css";
 
 const LanguageSwitcher = () => {
@@ -32,6 +34,12 @@ const LanguageSwitcher = () => {
       </button>
       <button onClick={() => changeLanguage("zh")}>
         <img src={chinaFlag} alt="中文" />
+      </button>
+      <button onClick={() => changeLanguage("es")}>
+        <img src={spanienFlag} alt="spaniol" />
+      </button>
+      <button onClick={() => changeLanguage("pt")}>
+        <img src={portugalFlag} alt="Português" />
       </button>
     </div>
   );

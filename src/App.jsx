@@ -4,14 +4,13 @@ import { useTranslation } from "react-i18next";
 
 // Import components and pages
 import LanguageSwitcher from "./components/LanguageSwitcher";
-import CircleLayout from "./components/CircleLayout";
 import RoomSelectionPage from "./pages/RoomSelectionPage";
 import Danke from "./pages/Danke";
 import ImpressumPage from "./pages/ImpressumPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import RegisterLogin from "./pages/RegisterLogin";
 import StartPage from "./pages/StartPage";
-import LoginPage from "./pages/LoginPage"; // Importiere die Login-Seite
+import TechnologyPage from "./pages/TechnologyPage"; // Geänderte Technology-Seite importieren
 
 const App = () => {
   const { t, i18n } = useTranslation(); // Für Übersetzungen und Sprachwechsel
@@ -53,7 +52,7 @@ const App = () => {
 
           {/* Authentifizierung */}
           <Route path="/RegisterLogin" element={<RegisterLogin />} />
-          <Route path="/login" element={<LoginPage />} /> {/* Login-Route */}
+          <Route path="/technology" element={<TechnologyPage />} /> {/* Technology-Route */}
 
           {/* Weitere Seiten */}
           <Route path="/rooms" element={<RoomSelectionPage />} />

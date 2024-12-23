@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { FaUser, FaInfoCircle, FaFileAlt, FaMicrochip } from "react-icons/fa"; // FaMicrochip als Technologie-Icon importieren
 import "./StartPage.css";
+import TranslationErrorMessage from "./TranslationErrorMessage"; // Hinweis-Komponente importieren
 
 const StartPage = () => {
-  const { t } = useTranslation(); // Übersetzungsfunktion aktivieren
-
   return (
     <div className="start-page">
       {/* Hintergrundbild */}
@@ -14,21 +13,28 @@ const StartPage = () => {
       {/* Animierter Wasser-Kreis */}
       <div className="water-circle"></div>
 
-      {/* Buttons um den Kreis herum */}
+      {/* Buttons mit Icons */}
       <div className="buttons-container">
-        <Link to="/login" className="circle-button top">
-          {t("login")} {/* Übersetzung für Login */}
+        {/* Technologie-Button */}
+        <Link to="/technology" className="circle-button top">
+          <FaMicrochip className="button-icon" /> {/* Technologie Icon */}
         </Link>
+
         <Link to="/about-us" className="circle-button left">
-          {t("about_us")} {/* Übersetzung für About Us */}
+          <FaInfoCircle className="button-icon" /> {/* About Us Icon */}
         </Link>
+
         <Link to="/impressum" className="circle-button right">
-          {t("impressum")} {/* Übersetzung für Impressum */}
+          <FaFileAlt className="button-icon" /> {/* Impressum Icon */}
         </Link>
+
         <Link to="/registerlogin" className="circle-button bottom">
-          {t("register")} {/* Übersetzung für Register */}
+          <FaUser className="button-icon" /> {/* Register Icon */}
         </Link>
       </div>
+
+      {/* Hinweis zu Übersetzungsfehlern */}
+      <TranslationErrorMessage />
     </div>
   );
 };

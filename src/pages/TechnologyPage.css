@@ -1,0 +1,177 @@
+/* Setze den Body und HTML auf 100% Höhe */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Horizontales Scrollen verhindern */
+}
+
+/* Hintergrundvideo-Container */
+.technology-page {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto; /* Scrollbar für vertikale Inhalte */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+}
+
+/* Hintergrundvideo */
+.technology-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/wasser.mp4');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.6); /* Abdunkeln für Lesbarkeit */
+}
+
+/* Container für den Inhalt */
+.content-container {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto; /* Abstand hinzufügen */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  flex: 1; /* Flexibles Wachstum */
+}
+
+/* Titel und Beschreibungen */
+.tech-title,
+.tech-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.tech-description,
+.tech-item p {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+  line-height: 1.4;
+}
+
+/* Technologie-Liste: Flexbox für 5 Elemente pro Zeile */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap; /* Erlaubt Zeilenumbruch */
+  gap: 20px; /* Abstand zwischen den Items */
+  margin-top: 30px;
+  overflow-x: auto; /* Scrollbar nur bei Überlauf */
+  justify-content: center; /* Zentriert Items */
+}
+
+/* Einzelne Technologie-Items */
+.tech-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 calc(20% - 20px); /* 5 Items pro Reihe, Abzug des Gaps */
+  box-sizing: border-box; /* Padding und Border einbeziehen */
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.tech-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Links und Buttons */
+.tech-link,
+.tech-button {
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tech-link {
+  color: #00c6ff;
+}
+
+.tech-link:hover {
+  color: #0072ff;
+}
+
+.tech-button {
+  color: #ffffff;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(0, 114, 255, 0.3);
+}
+
+.tech-button:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 114, 255, 0.5);
+}
+
+.tech-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tech-list {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .tech-item {
+    flex: 0 1 calc(50% - 15px); /* 2 Elemente pro Zeile */
+  }
+
+  .tech-title, .tech-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .tech-description, .tech-item p {
+    font-size: 0.8rem;
+  }
+
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-list {
+    gap: 10px;
+  }
+
+  .tech-item {
+    flex: 0 1 100%; /* 1 Element pro Zeile */
+  }
+
+  .tech-title, .tech-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .tech-item p {
+    font-size: 0.75rem;
+  }
+}
