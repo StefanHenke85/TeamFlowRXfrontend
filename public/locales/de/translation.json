@@ -50,10 +50,46 @@
   "room_name": "Raumname",
   "max_people": "Max. Personen",
   "create_room": "Raum erstellen",
-  "max_label": "Max"
+  "max_label": "Max",
 
+
+  "software_description": "Kurzbeschreibung der Software",
+
+  "platform_description": "Plattform für Teamwork und virtuelle Zusammenarbeit in 3D",
+
+  "responsible_content": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+
+  "disclaimer_text": "Haftungsausschluss: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.",
   
 
+"technology_title": "Technologien, die wir verwenden",
+ "technology_description": "Hier sind einige der wichtigsten Technologien, die wir verwenden, um diese Anwendung zu erstellen.",
+  "technologies_used": "Verwendete Technologien",
+  "react_description": "React ist eine JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen, die eine schnelle, interaktive und dynamische Erfahrung ermöglicht.",
+  "nodejs_description": "Node.js ist eine JavaScript-Laufzeitumgebung, die es ermöglicht, JavaScript auf dem Server auszuführen.",
+  "cognito_description": "AWS Cognito ist ein Service von Amazon Web Services (AWS), der eine einfache Möglichkeit zur Verwaltung von Benutzeridentitäten und zur Implementierung von Authentifizierungsfunktionen bietet.",
+  "ansible_description": "Ansible ist ein Open-Source-Automatisierungswerkzeug, das die Verwaltung von Servern und IT-Infrastrukturen vereinfacht.",
+  "github_description": "GitHub ist eine Plattform für die Versionskontrolle und Zusammenarbeit, die es Entwicklern ermöglicht, Code zu hosten und mit anderen zusammenzuarbeiten.",
+  "unity_description": "Unity ist eine leistungsstarke Entwicklungsumgebung für die Erstellung von 2D- und 3D-Spielen sowie interaktiven Erlebnissen.",
+  "blender_description": "Blender ist eine Open-Source-Software für 3D-Modellierung, Animation und Rendering.",
+  "vite_description": "Vite ist ein schneller Build-Tool und Entwicklungsserver, der moderne Webanwendungen optimiert.",
+  "capcut_description": "CapCut ist eine App zur Videobearbeitung, die leistungsstarke Funktionen und eine benutzerfreundliche Oberfläche bietet.",
+ "javascript_description": "JavaScript ist eine weit verbreitete Programmiersprache, die hauptsächlich in der Webentwicklung verwendet wird, um interaktive Elemente auf Webseiten zu erstellen.",
+  "hcl_description": "HashiCorp Configuration Language (HCL) ist eine Konfigurationssprache, die in vielen HashiCorp-Produkten wie Terraform verwendet wird.",
+  "learn_more": "Mehr erfahren",
+  
+  "translation_error_message": "Bitte beachten Sie, dass Übersetzungsfehler nicht ausgeschlossen sind und die Inhalte in einigen Fällen nicht vollständig korrekt wiedergegeben werden.",
+  "registrationSuccess": "Erfolgreich registriert!",
+  "registrationFailure": "Fehler bei der Registrierung. Bitte versuche es erneut.",
+  "invalidEmail": "Ungültige E-Mail-Adresse.",
+  "weakPassword": "Das Passwort ist zu schwach.",
+  "confirmationEmailSent": "Eine Bestätigungs-E-Mail wurde gesendet.",
+
+  "passwordValidationError": "1 Validierungsfehler gefunden: Der Wert bei 'password' entspricht nicht den Anforderungen: Das Mitglied muss das reguläre Ausdrucksmuster erfüllen: ^[\\S]+.*[\\S]+$"
+
+  
+  
+  
   
 }
 

@@ -51,10 +51,37 @@
   "room_name": "房间名称",
   "max_people": "最多人数",
   "create_room": "创建房间",
-  "max_label": "最多"
-  
-  
+  "max_label": "最多",
+  "software_description": "软件简短描述", 
+  "platform_description": "用于团队合作和虚拟协作的3D平台", 
+  "responsible_content": "根据§ 55 Abs. 2 RStV负责内容", 
+  "disclaimer_text": "免责声明：尽管我们对内容进行了仔细检查，但我们对外部链接的内容不承担任何责任。链接页面的内容由其运营商独自负责",
 
+  
+    "technology_title": "我们使用的技术",
+    "technology_description": "以下是我们用来构建此应用程序的一些关键技术。",
+    "technologies_used": "使用的技术",
+    "react_description": "React 是一个 JavaScript 库，用于构建用户界面，能够提供快速、互动和动态的体验。",
+    "nodejs_description": "Node.js 是一个 JavaScript 运行时，可以在服务器端运行 JavaScript。",
+    "cognito_description": "AWS Cognito 是亚马逊网络服务（AWS）提供的一项服务，便于管理用户身份并实现身份验证功能。",
+    "ansible_description": "Ansible 是一个开源自动化工具，用于简化服务器和 IT 基础设施的管理。",
+    "github_description": "GitHub 是一个版本控制和协作平台，允许开发人员托管代码并与他人协作。",
+    "unity_description": "Unity 是一个强大的开发环境，用于创建 2D 和 3D 游戏以及交互式体验。",
+    "blender_description": "Blender 是一个开源软件，用于 3D 建模、动画和渲染。",
+    "vite_description": "Vite 是一个快速的构建工具和开发服务器，针对现代 Web 应用进行了优化。",
+    "capcut_description": "CapCut 是一款视频编辑应用，具有强大的功能和直观的用户界面。",
+    "javascript_description": "JavaScript 是一种广泛使用的编程语言，主要用于 Web 开发，能够在网页中创建交互式元素。",
+    "hcl_description": "HashiCorp 配置语言（HCL）是一种配置语言，用于 HashiCorp 的许多产品，如 Terraform。",
+    "learn_more": "了解更多",
+    
+    "translation_error_message": "请注意，翻译错误不能排除，内容可能并不完全准确。",
+    "registrationSuccess": "注册成功！",
+    "registrationFailure": "注册失败，请重试。",
+    "invalidEmail": "无效的电子邮件地址。",
+    "weakPassword": "密码太弱。",
+    "confirmationEmailSent": "已发送确认电子邮件。",
+    "passwordValidationError": "发现1个验证错误：'password'的值未能满足约束：成员必须满足正则表达式模式：^[\\S]+.*[\\S]+$"
 
+        
 }
 

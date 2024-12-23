@@ -1,0 +1,89 @@
+{
+  
+    "language": "Idioma",
+    "impressum_title": "Aviso Legal",
+    "impressum_content": "Conteúdo da página de aviso legal",
+    "page_not_found": "Página não encontrada",
+    "return_home": "Voltar para a página inicial",
+    "register": "Registrar",
+    "login": "Entrar",
+    "verify": "Verificar",
+    "username": "Nome de usuário",
+    "password": "Senha",
+    "email": "Endereço de e-mail",
+    "verification_code": "Código de verificação",
+    "back_to_home": "Voltar para a página inicial",
+    "register_login": "Registrar / Entrar",
+    "email_verification": "Endereço de e-mail (para verificação)",
+    "verify_code": "Verificar código",
+    "register_success": "Registro bem-sucedido! Verifique seu e-mail.",
+    "register_error": "Erro durante o registro.",
+    "login_success": "Login bem-sucedido!",
+    "login_error": "Erro durante o login.",
+    "verification_success": "Verificação bem-sucedida!",
+    "verification_error": "Erro durante a verificação.",
+    "room_selection": "Ir para a seleção de sala",
+    "verification": "Verificação",
+    "about_us": "Sobre nós",
+    "about_us_description": "Somos uma equipe especializada em desenvolver plataformas criativas e interativas que levam a colaboração para o próximo nível.",
+    "welcome_message": "Bem-vindo ao TeamFlow-XR! Somos uma equipe dedicada a desenvolver plataformas criativas e interativas que levam a colaboração para o próximo nível.",
+    "goal_message": "Nosso objetivo é conectar pessoas em todo o mundo através de tecnologia inovadora e permitir um trabalho em equipe eficaz em um ambiente imersivo e dinâmico.",
+    "thank_you_message": "Obrigado por fazer parte da nossa visão. Juntos, moldamos o futuro da colaboração!",
+    "impressum": "Aviso Legal",
+    "impressum_intro": "Bem-vindo à nossa página de aviso legal.",
+    "company_name": "Nome da empresa",
+    "address": "Endereço: Confidencial",
+    "postal_city": "Código postal, Cidade: ***** CidadeSecreta",
+    "email_address": "Endereço de e-mail: secret@secret.secret",
+    "phone": "Telefone: *********",
+    "content_responsible": "Responsável pelo conteúdo:",
+    "responsible_person": "Pessoa responsável",
+    "disclaimer": "Isenção de responsabilidade",
+    "back_to_homepage": "Voltar para a página inicial",
+    "room_selection_title": "Seleção de sala",
+    "room_name": "Nome da sala",
+    "max_people": "Máx. pessoas",
+    "create_room": "Criar sala",
+    "max_label": "Máx",
+    "software_description": "Descrição curta do software",
+    "platform_description": "Plataforma para trabalho em equipe e colaboração virtual em 3D",
+    "responsible_content": "Responsável pelo conteúdo de acordo com § 55 Abs. 2 RStV",
+    "disclaimer_text": "Isenção de responsabilidade: Apesar do controle cuidadoso do conteúdo, não assumimos responsabilidade pelo conteúdo de links externos. Os operadores das páginas vinculadas são os únicos responsáveis pelo seu conteúdo.",
+
+    
+        "technology_title": "Tecnologias que usamos",
+        "technology_description": "Aqui estão algumas das principais tecnologias que usamos para construir este aplicativo.",
+        "technologies_used": "Tecnologias utilizadas",
+        "react_description": "React é uma biblioteca JavaScript para construção de interfaces de usuário que permite experiências rápidas, interativas e dinâmicas.",
+        "nodejs_description": "Node.js é um ambiente de execução JavaScript que permite rodar JavaScript no servidor.",
+        "cognito_description": "AWS Cognito é um serviço da Amazon Web Services (AWS) que fornece uma maneira fácil de gerenciar identidades de usuários e implementar funcionalidades de autenticação.",
+        "ansible_description": "Ansible é uma ferramenta de automação de código aberto que simplifica o gerenciamento de servidores e infraestrutura de TI.",
+        "github_description": "GitHub é uma plataforma para controle de versão e colaboração que permite aos desenvolvedores hospedar código e colaborar com outros.",
+        "unity_description": "Unity é um poderoso ambiente de desenvolvimento para criar jogos 2D e 3D e experiências interativas.",
+        "blender_description": "Blender é um software de código aberto para modelagem 3D, animação e renderização.",
+        "vite_description": "Vite é uma ferramenta de construção rápida e servidor de desenvolvimento otimizado para aplicativos web modernos.",
+        "capcut_description": "CapCut é um aplicativo de edição de vídeo com recursos poderosos e uma interface de usuário intuitiva.",
+        "javascript_description": "JavaScript é uma linguagem de programação amplamente utilizada, principalmente em desenvolvimento web, para criar elementos interativos em páginas web.",
+        "hcl_description": "HashiCorp Configuration Language (HCL) é uma linguagem de configuração usada em muitos produtos da HashiCorp, como Terraform.",
+        "learn_more": "Saiba mais",
+        
+        "translation_error_message": "Por favor, note que erros de tradução não estão excluídos e o conteúdo pode não ser completamente preciso.",
+        "registrationSuccess": "Registrado com sucesso!",
+        "registrationFailure": "Falha no registro. Por favor, tente novamente.",
+        "invalidEmail": "Endereço de e-mail inválido.",
+        "weakPassword": "A senha é muito fraca.",
+        "confirmationEmailSent": "Um e-mail de confirmação foi enviado.",
+        "passwordValidationError": "1 erro de validação detectado: O valor de 'password' não atende à restrição: O membro deve atender ao padrão da expressão regular: ^[\\S]+.*[\\S]+$"
+
+                    
+      
+      
+      
+
+
+
+
+
+}
+
+

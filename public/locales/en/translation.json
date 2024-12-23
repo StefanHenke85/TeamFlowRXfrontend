@@ -49,9 +49,40 @@
     "room_name": "Room Name",
     "max_people": "Max. People",
     "create_room": "Create Room",
-    "max_label": "Max"
+    "max_label": "Max",
+    "software_description": "Short description of the software",
+    "platform_description": "Platform for teamwork and virtual collaboration in 3D",
+    "responsible_content": "Responsible for the content according to § 55 Abs. 2 RStV", 
+    "disclaimer_text": "Disclaimer: Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.",
+    
+      "technology_title": "Technologies We Use",
+      "technology_description": "Here are some of the key technologies we use to build this application.",
+      "technologies_used": "Technologies Used",
+      "react_description": "React is a JavaScript library for building user interfaces that enables fast, interactive, and dynamic experiences.",
+      "nodejs_description": "Node.js is a JavaScript runtime that allows you to run JavaScript on the server side.",
+      "cognito_description": "AWS Cognito is a service from Amazon Web Services (AWS) that provides an easy way to manage user identities and implement authentication features.",
+      "ansible_description": "Ansible is an open-source automation tool that simplifies the management of servers and IT infrastructure.",
+      "github_description": "GitHub is a platform for version control and collaboration that allows developers to host code and collaborate with others.",
+      "unity_description": "Unity is a powerful development environment for creating 2D and 3D games and interactive experiences.",
+      "blender_description": "Blender is an open-source software for 3D modeling, animation, and rendering.",
+      "vite_description": "Vite is a fast build tool and development server optimized for modern web applications.",
+      "capcut_description": "CapCut is a video editing app with powerful features and an intuitive user interface.",
+      "javascript_description": "JavaScript is a widely used programming language, primarily used in web development to create interactive elements on web pages.",
+      "hcl_description": "HashiCorp Configuration Language (HCL) is a configuration language used in many HashiCorp products like Terraform.",
+      "learn_more": "Learn More",
       
+      "translation_error_message": "Please note that translation errors are not excluded, and the content may not always be completely accurate.",
 
+      "registrationSuccess": "Successfully registered!",
+      "registrationFailure": "Registration failed. Please try again.",
+      "invalidEmail": "Invalid email address.",
+      "weakPassword": "The password is too weak.",
+      "confirmationEmailSent": "A confirmation email has been sent.",
+      "passwordValidationError": "1 validation error detected: Value at 'password' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[\\S]+.*[\\S]+$"
+      
+      
+      
+   
 
       
 
