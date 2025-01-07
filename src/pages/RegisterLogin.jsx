@@ -14,18 +14,14 @@ const RegisterLogin = () => {
   const [message, setMessage] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState("");
-  const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
 
-  const userProfileImage = "https://via.placeholder.com/50"; // Beispiel-Profilbild
-  const userFullName = "Max Mustermann"; // Beispiel-Benutzername
-
   useEffect(() => {
+    // Prüfen, ob ein Token im localStorage gespeichert ist
     const savedToken = localStorage.getItem("authToken");
     if (savedToken) {
       setToken(savedToken);
       setIsLoggedIn(true);
-      setShowOverlay(true); // Overlay anzeigen
     }
   }, []);
 
@@ -52,33 +48,32 @@ const RegisterLogin = () => {
       setToken(userToken);
       setMessage(t("login_success"));
       setIsLoggedIn(true);
+      // Token im localStorage speichern
       localStorage.setItem("authToken", userToken);
-      setShowOverlay(true); // Overlay anzeigen
       navigate("/room-selection");
     } catch (error) {
       setMessage(error.response?.data?.error || t("login_error"));
     }
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("authToken");
-    setIsLoggedIn(false);
-    setToken("");
-    setShowOverlay(false); // Overlay ausblenden
-    navigate("/");
-  };
-
   const handleVerifyCode = async () => {
     try {
-      // Verifikationscode verarbeiten
       const response = await axios.post("http://localhost:5000/verify", {
-        email,
-        verificationCode,
+        username,
+        code: verificationCode,
       });
       setMessage(response.data.message || t("verification_success"));
     } catch (error) {
       setMessage(error.response?.data?.error || t("verification_error"));
     }
+  };
+
+  const handleLogout = () => {
+    // Token aus localStorage entfernen und den Login-Status zurücksetzen
+    localStorage.removeItem("authToken");
+    setIsLoggedIn(false);
+    setToken("");
+    navigate("/");
   };
 
   return (
@@ -165,17 +160,6 @@ const RegisterLogin = () => {
       <a href="/" className="link">
         {t("back_to_home")}
       </a>
-
-      {/* Overlay Menü für angemeldete Benutzer */}
-      {isLoggedIn && (
-        <div className={`overlay-menu ${showOverlay ? "show" : ""}`}>
-          <img src={userProfileImage} alt="Profilbild" />
-          <p>{userFullName}</p>
-          <button onClick={() => navigate("/profile")}>{t("profile")}</button>
-          <button onClick={() => navigate("/personal-data")}>{t("personal_data")}</button>
-          <button onClick={handleLogout}>{t("logout")}</button>
-        </div>
-      )}
     </div>
   );
 };

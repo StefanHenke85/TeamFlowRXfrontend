@@ -16,6 +16,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -2;
+  filter: brightness(50%) blur(5px); /* Dunkler und unscharf für Fokus auf Buttons */
 }
 
 /* Buttons Container */
@@ -23,141 +24,107 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /* Futuristisches Button Design */
 .circle-button {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparentes Schwarz */
+  background: rgba(255, 255, 255, 0.1); /* Transparente Grundfarbe */
   color: #fff;
-  padding: 12px 25px;
-  font-size: 1rem;
+  font-size: 1.4rem; /* Größere Schriftgröße */
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none;
   letter-spacing: 2px;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
-  z-index: 10;
-  box-shadow: 0 0 10px #8a2be2, 0 0 30px rgba(138, 43, 226, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 100px; /* Button-Größe */
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: absolute; /* Position der Buttons relativ zum Container */
 }
 
-/* Hover Effekt */
-.circle-button::before,
-.circle-button::after {
+/* Wellen-Effekt */
+.circle-button::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(138, 43, 226, 0.8),
-    transparent
-  );
-  transition: all 0.5s ease-in-out;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.6s ease;
   z-index: -1;
 }
 
 .circle-button:hover::before {
-  left: 100%;
+  width: 500%; /* Breitere Welle */
+  height: 500%; /* Höhere Welle */
+  opacity: 1; /* Sichtbar machen */
 }
 
+/* Hover-Effekt für den Button */
 .circle-button:hover {
-  color: #008cff;
-  border-color: #0099ff;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px #0099ff, 0 0 40px #0099ff;
+  transform: scale(1.1); /* Button wird leicht größer */
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 
+              0 0 40px rgba(106, 13, 173, 0.8),
+              0 0 60px rgba(138, 43, 226, 0.8);
 }
 
-/* Glitch Effekt */
-.circle-button:hover::after {
-  animation: glitch 0.7s infinite;
-}
-
-@keyframes glitch {
+/* Schwebende Animation */
+@keyframes floating {
   0% {
-    transform: translate(-2px, -2px);
-  }
-  25% {
-    transform: translate(2px, 2px);
+    transform: translate(-50%, -50%) translateY(0);
   }
   50% {
-    transform: translate(-2px, 2px);
-  }
-  75% {
-    transform: translate(2px, -2px);
+    transform: translate(-50%, -50%) translateY(-10px);
   }
   100% {
-    transform: translate(-2px, -2px);
+    transform: translate(-50%, -50%) translateY(0);
   }
 }
 
-/* Buttons Positionen */
+.circle-button {
+  animation: floating 3s ease-in-out infinite;
+}
+
+/* Positionierung der Buttons (entsprechend deiner Anfrage) */
 .circle-button.top {
-  top: 3%; /* Oben */
-  left: 51%;
+  top: 5%; /* Oben */
+  left: 51.5%;
+  transform: translateX(-50%);
 }
 
 .circle-button.left {
-  top: 45%; /* Links */
-  left: 30%;
+  top: 46%; /* Links */
+  left: 32%;
+  transform: translateX(-50%);
 }
 
 .circle-button.right {
   top: 45%; /* Rechts */
-  left: 71%;
+  left: 70%;
+  transform: translateX(-50%);
 }
 
 .circle-button.bottom {
-  bottom: 5%; /* Unten */
+  bottom: 3%; /* Unten */
   left: 52%;
+  transform: translateX(-50%);
 }
 
-
-.circle-button {
-  display: flex;
-  align-items: center; /* Zentriert Icon und Text vertikal */
-  justify-content: center;
-  gap: 8px; /* Abstand zwischen Icon und Text */
-  color: white; /* Textfarbe */
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-.button-icon {
-  font-size: 1.5rem; /* Größe der Icons */
-}
-
-.circle-button {
-  display: flex;
-  align-items: center; /* Zentriert Icon vertikal */
-  justify-content: center; /* Zentriert Icon horizontal */
-  color: white; /* Farbe der Icons */
-  text-decoration: none;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  border-radius: 50%; /* Kreisform */
-  width: 60px; /* Größe der Buttons */
-  height: 60px;
-  font-size: 1.5rem; /* Icon-Größe */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.circle-button:hover {
-  transform: scale(1.1); /* Hover-Effekt */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-.button-icon {
-  font-size: 2rem; /* Größe der Icons */
-}
-
-/* TranslationErrorMessage.css */
+/* Übersetzungsnachricht */
 .translation-error-message {
   position: fixed;
   bottom: 10px;

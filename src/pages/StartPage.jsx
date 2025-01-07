@@ -28,7 +28,7 @@ const StartPage = () => {
           <FaFileAlt className="button-icon" /> {/* Impressum Icon */}
         </Link>
 
-        <Link to="/registerlogin" className="circle-button bottom">
+        <Link to="/login" className="circle-button bottom">
           <FaUser className="button-icon" /> {/* Register Icon */}
         </Link>
       </div>
