@@ -1,0 +1,28 @@
+.language-switcher {
+    position: fixed;
+    top: 10px; /* Abstand von oben */
+    right: 10px; /* Abstand von rechts */
+    display: flex;
+    gap: 5px; /* Abstand zwischen den Buttons */
+    z-index: 1000; /* Damit es immer über anderen Inhalten liegt */
+  }
+  
+  .language-switcher button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .language-switcher img {
+    width: 24px; /* Größe der Flaggen */
+    height: 24px;
+    border-radius: 50%; /* Runde Flaggen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+    transition: transform 0.2s;
+  }
+  
+  .language-switcher img:hover {
+    transform: scale(1.1); /* Vergrößern beim Hover */
+  }
+  
