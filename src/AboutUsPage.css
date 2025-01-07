@@ -1,0 +1,123 @@
+/* Allgemeine Einstellungen */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Hintergrund */
+.about-us-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Vollbild */
+  text-align: center;
+}
+
+/* Glas-Effekt-Box */
+.about-us-content {
+  position: relative;
+  width: 700px;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.1); /* Transparenter Hintergrund */
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 230, 255, 0.6);
+  padding: 40px;
+  animation: fadeIn 1.2s ease-in-out, float 5s infinite ease-in-out;
+  z-index: 2; /* Über dem Hintergrundvideo */
+}
+
+/* Titel */
+.about-us-content h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  color: #00e6ff;
+  text-shadow: 0 0 15px #00e6ff;
+  animation: pulse 2s infinite;
+}
+
+/* Texte */
+.about-us-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #e0f7fa;
+  margin: 10px 0;
+}
+
+/* Button */
+.back-button-container {
+  margin-top: 25px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #00e6ff;
+  border: 2px solid #00e6ff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 230, 255, 0.8);
+}
+
+.back-button:hover {
+  background: #00e6ff;
+  color: #333;
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 230, 255, 1);
+}
+
+/* Header- und Footer-Balken */
+.header-bar, .footer-bar {
+  position: fixed;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #00e6ff, #0066ff);
+  box-shadow: 0 0 10px rgba(0, 230, 255, 0.7);
+}
+
+.header-bar {
+  top: 0;
+}
+
+.footer-bar {
+  bottom: 0;
+}
+
+/* Keyframe-Animationen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #00e6ff, 0 0 30px #00e6ff;
+  }
+}
