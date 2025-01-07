@@ -72,11 +72,16 @@
   "invalidEmail": "Dirección de correo electrónico no válida.",
   "weakPassword": "La contraseña es demasiado débil.",
   "confirmationEmailSent": "Se ha enviado un correo electrónico de confirmación.",
-  "passwordValidationError": "Se detectó 1 error de validación: El valor de 'password' no cumple con la restricción: El miembro debe cumplir con el patrón de expresión regular: ^[\\S]+.*[\\S]+$"
-
-          
- 
-      
-      
+  "passwordValidationError": "Se detectó 1 error de validación: El valor de 'password' no cumple con la restricción: El miembro debe cumplir con el patrón de expresión regular: ^[\\S]+.*[\\S]+$",
   
+    "login_title": "Iniciar sesión",
+    "username_placeholder": "Nombre de usuario",
+    "password_placeholder": "Contraseña",
+    "login_button": "Iniciar sesión",
+    "not_registered_yet": "¿Aún no estás registrado?",
+    
+      "register_title": "Registrarse",
+      "email_placeholder": "Correo electrónico",
+      "register_button": "Registrarse",
+      "already_registered": "¿Ya estás registrado?"
 }

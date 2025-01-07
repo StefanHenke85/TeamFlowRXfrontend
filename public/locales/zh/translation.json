@@ -80,7 +80,20 @@
     "invalidEmail": "无效的电子邮件地址。",
     "weakPassword": "密码太弱。",
     "confirmationEmailSent": "已发送确认电子邮件。",
-    "passwordValidationError": "发现1个验证错误：'password'的值未能满足约束：成员必须满足正则表达式模式：^[\\S]+.*[\\S]+$"
+    "passwordValidationError": "发现1个验证错误：'password'的值未能满足约束：成员必须满足正则表达式模式：^[\\S]+.*[\\S]+$",
+    
+      "login_title": "登录",
+      "username_placeholder": "用户名",
+      "password_placeholder": "密码",
+      "login_button": "登录",
+      "not_registered_yet": "还没有注册？",
+
+    
+        "register_title": "注册",
+        "email_placeholder": "电子邮件",
+        "register_button": "注册",
+        "already_registered": "已经注册了？"
+
 
         
 }

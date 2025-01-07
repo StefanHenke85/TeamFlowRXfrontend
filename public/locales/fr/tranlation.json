@@ -79,12 +79,19 @@
   "invalidEmail": "Adresse e-mail invalide.",
   "weakPassword": "Le mot de passe est trop faible.",
   "confirmationEmailSent": "Un e-mail de confirmation a été envoyé.",
-  "passwordValidationError": "1 erreur de validation détectée : La valeur de 'password' ne satisfait pas la contrainte : Le membre doit respecter le modèle d'expression régulière : ^[\\S]+.*[\\S]+$"
+  "passwordValidationError": "1 erreur de validation détectée : La valeur de 'password' ne satisfait pas la contrainte : Le membre doit respecter le modèle d'expression régulière : ^[\\S]+.*[\\S]+$",
 
+  
+    "login_title": "Connexion",
+    "username_placeholder": "Nom d'utilisateur",
+    "password_placeholder": "Mot de passe",
+    "login_button": "Se connecter",
+    "not_registered_yet": "Pas encore inscrit ?",
     
-
-
-
+      "register_title": "S'inscrire",
+      "email_placeholder": "E-mail",
+      "register_button": "S'inscrire",
+      "already_registered": "Déjà inscrit ?"
   } 
   
 

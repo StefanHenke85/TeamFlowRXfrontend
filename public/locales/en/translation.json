@@ -78,13 +78,19 @@
       "invalidEmail": "Invalid email address.",
       "weakPassword": "The password is too weak.",
       "confirmationEmailSent": "A confirmation email has been sent.",
-      "passwordValidationError": "1 validation error detected: Value at 'password' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[\\S]+.*[\\S]+$"
+      "passwordValidationError": "1 validation error detected: Value at 'password' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[\\S]+.*[\\S]+$",
       
       
-      
-   
-
-      
-
+        "login_title": "Login",
+        "username_placeholder": "Username",
+        "password_placeholder": "Password",
+        "login_button": "Login",
+        "not_registered_yet": "Not registered yet?",
+        
+        
+          "register_title": "Register",
+          "email_placeholder": "Email",
+          "register_button": "Register",
+          "already_registered": "Already registered?"        
   }
   

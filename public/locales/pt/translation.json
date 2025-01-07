@@ -73,16 +73,19 @@
         "invalidEmail": "Endereço de e-mail inválido.",
         "weakPassword": "A senha é muito fraca.",
         "confirmationEmailSent": "Um e-mail de confirmação foi enviado.",
-        "passwordValidationError": "1 erro de validação detectado: O valor de 'password' não atende à restrição: O membro deve atender ao padrão da expressão regular: ^[\\S]+.*[\\S]+$"
+        "passwordValidationError": "1 erro de validação detectado: O valor de 'password' não atende à restrição: O membro deve atender ao padrão da expressão regular: ^[\\S]+.*[\\S]+$",
 
-                    
-      
-      
-      
-
-
-
-
+        
+            "login_title": "Entrar",
+            "username_placeholder": "Nome de usuário",
+            "password_placeholder": "Senha",
+            "login_button": "Entrar",
+            "not_registered_yet": "Ainda não registrado?",         
+            
+                "register_title": "Registrar",
+                "email_placeholder": "E-mail",
+                "register_button": "Registrar",
+                "already_registered": "Já registrado?"
 
 }
 

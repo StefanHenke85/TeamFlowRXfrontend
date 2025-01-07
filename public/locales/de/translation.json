@@ -85,7 +85,18 @@
   "weakPassword": "Das Passwort ist zu schwach.",
   "confirmationEmailSent": "Eine Bestätigungs-E-Mail wurde gesendet.",
 
-  "passwordValidationError": "1 Validierungsfehler gefunden: Der Wert bei 'password' entspricht nicht den Anforderungen: Das Mitglied muss das reguläre Ausdrucksmuster erfüllen: ^[\\S]+.*[\\S]+$"
+  "passwordValidationError": "1 Validierungsfehler gefunden: Der Wert bei 'password' entspricht nicht den Anforderungen: Das Mitglied muss das reguläre Ausdrucksmuster erfüllen: ^[\\S]+.*[\\S]+$",
+  
+    "login_title": "Anmelden",
+    "username_placeholder": "Benutzername",
+    "password_placeholder": "Passwort",
+    "login_button": "Anmelden",
+    "not_registered_yet": "Noch nicht registriert?",
+    
+      "register_title": "Registrieren",
+      "email_placeholder": "E-Mail",
+      "register_button": "Registrieren",
+      "already_registered": "Bereits registriert?"    
 
   
   
