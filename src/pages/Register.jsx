@@ -4,6 +4,8 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 import "./Register.css";
 
+const API_BASE_URL = "http://52.58.80.140:5000"; // Ersetze dies durch deine EC2-Adresse
+
 const Register = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -14,9 +16,9 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      await axios.post("http://localhost:5000/register", { username, password, email });
+      await axios.post(`${API_BASE_URL}/register`, { username, password, email });
       setMessage(t("register_success"));
-      navigate("/verify"); // Nach erfolgreicher Registrierung zur Verifizierung weiterleiten
+      navigate("/verify");
     } catch (error) {
       setMessage(error.response?.data?.error || t("register_error"));
     }
