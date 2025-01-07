@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -8,34 +8,64 @@ import RoomSelectionPage from "./pages/RoomSelectionPage";
 import Danke from "./pages/Danke";
 import ImpressumPage from "./pages/ImpressumPage";
 import AboutUsPage from "./pages/AboutUsPage";
-import RegisterLogin from "./pages/RegisterLogin";
 import StartPage from "./pages/StartPage";
-import TechnologyPage from "./pages/TechnologyPage"; // Geänderte Technology-Seite importieren
+import TechnologyPage from "./pages/TechnologyPage";
+import Register from "./pages/Register"; // Neue Registrierungskomponente
+import Verify from "./pages/Verify"; // Neue Verifizierungskomponente
+import Login from "./pages/Login"; // Neue Login-Komponente
 
 const App = () => {
-  const { t, i18n } = useTranslation(); // Für Übersetzungen und Sprachwechsel
+  const { t, i18n } = useTranslation();
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Authentifizierung
+  const [user, setUser] = useState(null); // Aktuelle Benutzerdaten
+
+  useEffect(() => {
+    // Überprüfen, ob der Benutzer eingeloggt ist
+    const savedToken = localStorage.getItem("authToken");
+    if (savedToken) {
+      setIsAuthenticated(true);
+      setUser({ token: savedToken });
+    }
+  }, []);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    localStorage.setItem("language", lng); // Speichern der Sprache im localStorage
+    localStorage.setItem("language", lng);
+  };
+
+  const handleLogin = (userData) => {
+    setIsAuthenticated(true);
+    setUser(userData);
+    localStorage.setItem("authToken", userData.token);
+  };
+
+  const handleLogout = () => {
+    console.log("Ausloggen");
+    setIsAuthenticated(false);
+    setUser(null);
+    localStorage.removeItem("authToken");
+  };
+
+  const handleEditProfile = () => {
+    console.log("Profil bearbeiten");
   };
 
   return (
     <div style={{ position: "relative" }}>
       {/* Hintergrundvideo */}
       <video
-        src="/wasser.mp4" // Stelle sicher, dass "wasser.mp4" im "public"-Ordner liegt
+        src="/wasser.mp4"
         autoPlay
         loop
         muted
         style={{
-          position: "fixed", // Fixiert das Video als Hintergrund
+          position: "fixed",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          objectFit: "cover", // Passt das Video an den Container an
-          zIndex: -1, // Sendet das Video in den Hintergrund
+          objectFit: "cover",
+          zIndex: -1,
         }}
       ></video>
 
@@ -47,21 +77,21 @@ const App = () => {
       {/* Hauptinhalt */}
       <main>
         <Routes>
-          {/* Startseite */}
           <Route path="/" element={<StartPage />} />
-
-          {/* Authentifizierung */}
-          <Route path="/RegisterLogin" element={<RegisterLogin />} />
-          <Route path="/technology" element={<TechnologyPage />} /> {/* Technology-Route */}
-
-          {/* Weitere Seiten */}
+          <Route path="/register" element={<Register />} /> {/* Registrierung */}
+          <Route path="/verify" element={<Verify />} /> {/* Verifizierung */}
+          <Route path="/login" element={<Login />} /> {/* Login */}
+          <Route path="/technology" element={<TechnologyPage />} />
           <Route path="/rooms" element={<RoomSelectionPage />} />
           <Route path="/danke" element={<Danke />} />
           <Route path="/impressum" element={<ImpressumPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/room-selection" element={<RoomSelectionPage />} />
-
-          {/* Fallback-Seite für ungültige URLs */}
+          <Route
+            path="/edit-profile"
+            element={<div>Profil bearbeiten Seite</div>}
+          />
+          <Route path="/logout" element={<div>Erfolgreich ausgeloggt</div>} />
           <Route
             path="*"
             element={
