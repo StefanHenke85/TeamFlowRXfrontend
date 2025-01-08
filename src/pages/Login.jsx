@@ -4,7 +4,7 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 import "./Login.css";
 
-const API_BASE_URL = "http://63.176.154.221:5173"; // Ersetze dies durch deine EC2-Adresse
+const API_BASE_URL = "http://0.0.0.0:5000"; // Ersetze dies durch deine EC2-Adresse
 
 const Login = () => {
   const { t } = useTranslation();
