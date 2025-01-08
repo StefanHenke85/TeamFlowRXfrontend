@@ -4,7 +4,7 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 import "./Verify.css";
 
-const API_BASE_URL = "http://63.176.154.221:5000"; // Ersetze dies durch deine EC2-Adresse
+const API_BASE_URL = "http://63.176.154.221:5173/verify"; // Ersetze dies durch deine EC2-Adresse
 
 const Verify = () => {
   const { t } = useTranslation();
@@ -24,7 +24,7 @@ const Verify = () => {
   };
 
   return (
-    <div className="container">
+    <div className="verify-container">
       <h1>{t("verify")}</h1>
       <input
         type="text"
