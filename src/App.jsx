@@ -12,6 +12,7 @@ import TechnologyPage from "./pages/TechnologyPage";
 import Register from "./pages/Register"; // Neue Registrierungskomponente
 import Verify from "./pages/Verify"; // Neue Verifizierungskomponente
 import Login from "./pages/Login"; // Neue Login-Komponente
+import Presentation from "./pages/Presentation";
 
 const App = () => {
   const { t, i18n } = useTranslation();
@@ -85,6 +86,7 @@ const App = () => {
           <Route path="/impressum" element={<ImpressumPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/room-selection" element={<RoomSelectionPage />} />
+          <Route path="/presentation" element={<Presentation />} />
           <Route
             path="/edit-profile"
             element={<div>Profil bearbeiten Seite</div>}
