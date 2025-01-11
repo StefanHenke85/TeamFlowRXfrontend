@@ -19,7 +19,7 @@ const Login = () => {
       const response = await axios.post(`${API_BASE_URL}/login`, { username, password });
       localStorage.setItem("authToken", response.data.token);
       setMessage(t("login_success"));
-      navigate("/room-selection");
+      navigate("/https://teamflowrx.de/teamflowrx/meets/");
     } catch (error) {
       setMessage(error.response?.data?.error || t("login_error"));
     }
@@ -31,7 +31,7 @@ const Login = () => {
       const res = await axios.post(`${API_BASE_URL}/google-login`, { token: googleToken });
       localStorage.setItem("authToken", res.data.token);
       setMessage(t("login_success"));
-      navigate("/room-selection");
+      navigate("/https://teamflowrx.de/teamflowrx/meets/");
     } catch (error) {
       setMessage(error.response?.data?.error || t("login_error"));
     }
