@@ -21,7 +21,7 @@ const Login = () => {
       const response = await axios.post(`${API_BASE_URL}/login`, { username, password });
       localStorage.setItem("authToken", response.data.token); // Token im Local Storage speichern
       setMessage(t("login_success"));
-      navigate("/https://teamflowrx.de/teamflowrx/meets/"); // Zur gewünschten URL nach erfolgreichem Login navigieren
+      window.location.href = "https://teamflowrx.de/teamflowrx/meets/"; // Externe URL aufrufen
     } catch (error) {
       setMessage(error.response?.data?.error || t("login_error"));
     }
@@ -33,7 +33,7 @@ const Login = () => {
       const res = await axios.post(`${API_BASE_URL}/google-login`, { token: googleToken });
       localStorage.setItem("authToken", res.data.token); // Token im Local Storage speichern
       setMessage(t("login_success"));
-      navigate("/https://teamflowrx.de/teamflowrx/meets/"); // Zur gewünschten URL nach erfolgreichem Google Login navigieren
+      window.location.href = "https://teamflowrx.de/teamflowrx/meets/"; // Externe URL aufrufen
     } catch (error) {
       setMessage(error.response?.data?.error || t("login_error"));
     }
@@ -75,3 +75,4 @@ const Login = () => {
 };
 
 export default Login;
+
