@@ -4,7 +4,8 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 import "./Verify.css";
 
-const API_BASE_URL = "http://63.176.154.221:5173"; // Ersetze dies durch deine EC2-Adresse
+// API URL für dein Backend
+const API_BASE_URL = "http://63.176.154.221:8080"; // Ändere dies auf den richtigen Port, z.B. 8080
 
 const Verify = () => {
   const { t } = useTranslation();
@@ -15,9 +16,10 @@ const Verify = () => {
 
   const handleVerify = async () => {
     try {
+      // API-Aufruf zur Verifizierung des Codes
       await axios.post(`${API_BASE_URL}/verify`, { username, code: verificationCode });
       setMessage(t("verification_success"));
-      navigate("/login");
+      navigate("/login"); // Nach erfolgreicher Verifizierung zum Login weiterleiten
     } catch (error) {
       setMessage(error.response?.data?.error || t("verification_error"));
     }

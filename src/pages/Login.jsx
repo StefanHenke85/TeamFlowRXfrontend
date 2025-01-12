@@ -5,7 +5,8 @@ import { useTranslation } from "react-i18next";
 import { GoogleLogin } from "@react-oauth/google"; // GoogleLogin importieren
 import "./Login.css";
 
-const API_BASE_URL = "http://63.176.154.221:5173"; // Ersetze dies durch deine EC2-Adresse
+// API URL für dein Backend
+const API_BASE_URL = "http://63.176.154.221:8080"; // Ändere dies auf den richtigen Port, z.B. 8080
 
 const Login = () => {
   const { t } = useTranslation();
@@ -16,10 +17,11 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
+      // API-Aufruf zum Login
       const response = await axios.post(`${API_BASE_URL}/login`, { username, password });
-      localStorage.setItem("authToken", response.data.token);
+      localStorage.setItem("authToken", response.data.token); // Token im Local Storage speichern
       setMessage(t("login_success"));
-      navigate("/https://teamflowrx.de/teamflowrx/meets/");
+      navigate("/https://teamflowrx.de/teamflowrx/meets/"); // Zur gewünschten URL nach erfolgreichem Login navigieren
     } catch (error) {
       setMessage(error.response?.data?.error || t("login_error"));
     }
@@ -29,9 +31,9 @@ const Login = () => {
     try {
       const googleToken = response.credential; // Google OAuth Token
       const res = await axios.post(`${API_BASE_URL}/google-login`, { token: googleToken });
-      localStorage.setItem("authToken", res.data.token);
+      localStorage.setItem("authToken", res.data.token); // Token im Local Storage speichern
       setMessage(t("login_success"));
-      navigate("/https://teamflowrx.de/teamflowrx/meets/");
+      navigate("/https://teamflowrx.de/teamflowrx/meets/"); // Zur gewünschten URL nach erfolgreichem Google Login navigieren
     } catch (error) {
       setMessage(error.response?.data?.error || t("login_error"));
     }
