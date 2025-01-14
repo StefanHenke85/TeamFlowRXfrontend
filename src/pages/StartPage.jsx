@@ -29,11 +29,16 @@ const StartPage = () => {
           <FaUser className="button-icon" />
         </Link>
 
-        {/* Präsentations-Button */}
-        <Link to="/presentation" className="circle-button presentation">
-          <FaTv className="button-icon" />
-        </Link>
-      </div>
+      {/* Präsentations-Button */}
+        <a 
+           href="https://view.genially.com/6784ed4c3ebd3eeb1414c456/presentation-teamflowxr" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           className="circle-button presentation"
+                                                  >
+  <FaTv className="button-icon" />
+</a>
+
 
       {/* Modernerer Willkommenstext */}
       <div className="welcome-container">
