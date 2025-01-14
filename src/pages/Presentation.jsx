@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./Presentation.css";
 
 const Presentation = () => {
-  const pdfUrl = "/Prasi.pdf";
   const navigate = useNavigate();
+  const geniallyUrl = "https://view.genially.com/6784ed4c3ebd3eeb1414c456/presentation-teamflowxr";
 
   return (
     <div className="presentation-container">
@@ -16,23 +16,18 @@ const Presentation = () => {
           ← Zurück zur Startseite
         </button>
       </div>
-      <div className="presentation-frame">
-        <iframe
-          src={pdfUrl}
-          title="Präsentation"
-          style={{
-            position: 'fixed',
-            top: '40px', // Platz für Flaggenleiste
-            left: '0',
-            width: '100%',
-            height: 'calc(100vh - 40px)', // Vollbild minus Flaggenleiste
-            border: 'none',
-            zIndex: '999'
-          }}
-        />
+      <div className="link-container">
+        <p>Klicke auf den Button, um die Präsentation zu öffnen:</p>
+        <button 
+          className="presentation-button"
+          onClick={() => window.open(geniallyUrl, "_blank", "noopener,noreferrer")}
+        >
+          Präsentation öffnen
+        </button>
       </div>
     </div>
   );
 };
 
 export default Presentation;
+
